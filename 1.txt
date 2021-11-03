@@ -1,1 +1,66 @@
-Git nie jest trudny
+DELETE FROM postac
+WHERE rodzaj='wiking'
+or rodzaj='ptak'
+WHERE rodzaj is not Null; 
+
+
+
+
+ALTER TABLE postac drop FOREIGN KEY nazwa klaucza;
+ALTER TABLE postac drop PRIMARY KEY;
+
+
+2b
+ALTER TABLE 
+
+
+SELECT nazwa FROM postac 
+WHERE nazwa LIKE '%a%';
+WHERE nazwa LIKE 'A%';
+
+
+
+
+
+UPDATE statek SET ladownosc= 0.7 * ladownosc
+WHERE data_wodowania >= ' 1901-01-01'
+and data_wodowania <= '2000-12-31';
+
+
+ALTER TABLE postac MODIFY wiek int unsigned CHECK(wiek < 1000);
+
+
+
+
+ALTER TABLE postac MODIFY rodzaj przepisujac wszystkie rodzaje dodajac ten ktory chcemy dodac
+		
+
+CREATE TABLE marynarz LIKE postac 
+albo 
+CREATE TABLE marynarz SELECT * FROM postac;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 5a
+ wstawienie null w kolumnie statek tabeli postac (o ile to mozliwe jezeli nie to zmieniamy atrybuty kolumny aby to bylo mozliwe)
+  5b 
+  DELETE FROM postac WHERE ...;
+  5c
+  DELETE FROM statek;
+  5d
+  DROP TABLE statek;
+  5e
+  CREATE TABLE zwierz ();
+  5f
+  INSERT INTO zwierz SELECT id_postaci,nazwa,wiek FROM postac 
+  
+  
+  
+  nazwa varchar(50), 
+  rodzaj enum('wiking','ptak','kobieta','syrena','waz');
+  data_ur date,
+  wiek int unsigned);
